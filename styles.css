@@ -1,0 +1,276 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  color: #000;
+  background: url('Images/Desktop2.png') center/cover no-repeat;
+  cursor: url('Images/cursor.png'), auto;
+  margin: 0;
+}
+
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 15px;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.nav-list {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-item {
+  display: block; /* Changed from inline-block to block */
+  margin-bottom: 10px; /* Added margin to separate items */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: block; /* Added for full-width links */
+  padding: 10px; /* Added padding for touch-friendly area */
+}
+
+.nav-item a:hover {
+  color: #ffd700;
+}
+
+.close-button {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 15px; /* Adjust the top position as needed */
+  left: 20px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px;
+  width: calc(100% - 40px);
+}
+
+.top-center h1 {
+  color: white;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.top-right {
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.image-name {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#hovered-image-name {
+  font-family: 'Roboto Slab', serif;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.heading {
+  background: white;
+  height: 5%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 72%;
+  margin-top: -30px;
+  margin-bottom: 60px;
+  z-index: 1;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-general {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 80%; /* Changed to percentage for responsiveness */
+  max-width: 800px; /* Added max-width for larger screens */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  margin-top: 20px; /* Adjust this property to control the space */
+}
+
+.bottom-center a{
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 15px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin:0 10px; /* Add margin to separate links */
+}
+
+.bottom-center a:hover {
+  background-color: #333;
+  color: white;
+}
+
+
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60vh;
+  perspective: 1000px;
+  position: relative;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  margin: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 0.8s ease;
+  transform-origin: center center;
+  transform: perspective(1000px) skewY(-15deg);
+  border-radius: 15px;
+  position: relative;
+}
+
+.item:nth-child(odd) {
+  margin-top: 50px;
+}
+
+.item:nth-child(even) {
+  margin-bottom: 50px;
+}
+
+.item:hover {
+  flex: 7;
+  opacity: 1;
+  transform: perspective(1000px) skewY(0deg);
+}
+
+.wrap-effect-1 .item {
+  border-radius: 15px; /* Apply border-radius to all items */
+}
+
+.wrap-effect-1 .item:first-of-type {
+  background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4185141/galshir-cactus-coffee.png');
+}
+
+.wrap-effect-1 .item:nth-of-type(2) {
+  background-image: url('https://cdn.dribbble.com/users/729829/screenshots/6146136/galshir-tea-biscuit_2x.png');
+}
+
+.wrap-effect-1 .item:nth-of-type(3) {
+  background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4473482/galshir-dog-walker.gif');
+}
+
+.wrap-effect-1 .item:nth-of-type(4) {
+  background-image: url('https://cdn.dribbble.com/users/729829/screenshots/5743606/gal-shir-scooter_2x.png');
+}
+
+.wrap-effect-1 .item:last-of-type {
+  background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4738104/galshir-storytime.png');
+}
+
+@keyframes dropAnimation {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dropping-image {
+  position: fixed;
+  top: 0;
+  right: 2%;
+  animation: dropAnimation 2s ease-out;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-header {
+    flex-direction: column; /* Change flex direction for small screens */
+    align-items: center;
+  }
+
+  .top-right {
+    margin-top: 10px; /* Add margin to the top-right div */
+  }
+
+  .menu-icon {
+    margin-top: 10px; /* Add margin to the menu icon */
+  }
+
+  .navbar {
+    top: 40px; /* Adjust the top position of the navbar */
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husena Limdiwala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="background-container">    
+  <header class="top-header">
+    <div class="top-center">
+        <h1>Husena Limdiwala</h1>
+    </div>
+    <div class="top-right">
+        <span class="menu-icon" onclick="toggleNavBar()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </span>
+        
+    </div>
+  </header>
+
+  <nav class="navbar" id="navbar">
+    <span class="close-button" onclick="toggleNavBar()">✖
+    <ul class="nav-list">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
+  </span>
+  </nav>
+ 
+  
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="container-general">
+          <div class="gallery-wrap wrap-effect-1">
+            <div class="item" data-name="Cactus Coffee"></div>
+            <div class="item" data-name="Tea Biscuit"></div>
+            <div class="item" data-name="Dog Walker"></div>
+            <div class="item" data-name="Scooter"></div>
+            <div class="item" data-name="Storytime"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-center">
+    <div class="button-container">
+      <a href="#resume">Check My Resume</a>
+      <a href="#projects">View all projects</a>
+    </div>
+  </div>
+</div>
+
+<div class="image-name">
+  <p id="hovered-image-name"></p>
+</div>
+
+<!-- Dropping Image -->
+<img src="Images/dROP.png" alt="Dropping Image" class="dropping-image">
+
+<script src="scripts.js"></script>
+</body>
+</html>
