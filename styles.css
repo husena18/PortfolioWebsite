@@ -68,6 +68,7 @@ a {
 
 /* Header Section */
 .header {
+  width: 100%;
   background: linear-gradient(to bottom, #000, #333);
   color: #fff;
   padding: 20px 0;
@@ -77,26 +78,27 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* For mobile-friendly toggle */
+  padding: 10px 20px;
+  position: relative;
 }
 
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: #f3f3f3;
 }
 
 .menu {
   display: flex;
   list-style: none;
   gap: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu li a {
   font-size: 1em;
   padding: 10px 15px;
   border-radius: 5px;
-  transition: background 0.3s;
+  text-decoration: none;
 }
 
 .menu li a:hover {
@@ -106,80 +108,45 @@ a {
 
 /* Mobile menu toggle (hamburger) */
 .menu-toggle {
-  display: none;
+  display: none; /* Hidden by default for larger screens */
   flex-direction: column;
   justify-content: space-between;
   height: 20px;
   width: 30px;
   cursor: pointer;
+  z-index: 1000; /* Ensure it is on top */
 }
 
 .menu-toggle div {
   height: 3px;
-  background-color: #fff;
+  background-color: #fff; /* Make sure the color contrasts with the background */
   border-radius: 3px;
-}
-
-.menu-mobile {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 20px 0;
-}
-
-.menu-mobile li {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.menu-mobile li a {
-  padding: 10px;
-  font-size: 1.2em;
-  color: #fff;
-}
-
-.menu-mobile li a:hover {
-  background: #f3f3f3;
-  color: #000;
+  transition: all 0.3s ease;
 }
 
 /* Media Query for Mobile */
 @media only screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+  .menu-toggle {
+    display: flex; /* Show hamburger icon for smaller screens */
   }
 
   .menu {
-    display: none; /* Hide menu items on mobile by default */
-    width: 100%;
+    display: none; /* Hide the main menu initially */
+  }
+
+  .menu.active {
+    display: flex; /* Show the menu when toggled */
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .menu-toggle {
-    display: flex; /* Show hamburger icon */
-  }
-
-  .menu-mobile {
-    display: block; /* Display mobile menu */
-  }
-
-  .menu-toggle.active + .menu-mobile {
-    display: block;
+    background-color: #333; /* Background color for the menu */
+    width: 100%; /* Full-width menu */
+    position: absolute; /* Position it below the navbar */
+    top: 100%; 
+    left: 0%;
   }
 
   .menu li {
-    width: 100%;
+    margin: 10px 0;
     text-align: center;
-  }
-
-  .menu li a {
-    padding: 12px 20px;
-    font-size: 1.2em;
   }
 }
 

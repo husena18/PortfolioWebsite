@@ -12,11 +12,12 @@ document.querySelectorAll('.item').forEach(item => {
     });
 });
 
-
-// Toggle the mobile menu when the hamburger icon is clicked
+//Toggle Navbar
 document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.menu').classList.toggle('active');
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
