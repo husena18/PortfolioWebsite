@@ -33,6 +33,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* For mobile-friendly toggle */
 }
 
 .logo {
@@ -57,6 +58,85 @@ a {
 .menu li a:hover {
   background: #f3f3f3;
   color: #000;
+}
+
+/* Mobile menu toggle (hamburger) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.menu-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 20px 0;
+}
+
+.menu-mobile li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.menu-mobile li a {
+  padding: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.menu-mobile li a:hover {
+  background: #f3f3f3;
+  color: #000;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none; /* Hide menu items on mobile by default */
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .menu-mobile {
+    display: block; /* Display mobile menu */
+  }
+
+  .menu-toggle.active + .menu-mobile {
+    display: block;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li a {
+    padding: 12px 20px;
+    font-size: 1.2em;
+  }
 }
 
 /* Hero Section */

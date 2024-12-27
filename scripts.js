@@ -11,3 +11,9 @@ document.querySelectorAll('.item').forEach(item => {
         imageNameDisplay.classList.remove('active'); // Hide the name
     });
 });
+
+
+// Toggle the mobile menu when the hamburger icon is clicked
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.menu').classList.toggle('active');
+});

@@ -11,20 +11,33 @@
 <body>
     <header class="header">
         <div class="container">
-            <nav class="navbar">
-                <div class="logo">Husena Limdiwala</div>
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+          <nav class="navbar">
+            <div class="logo">Husena Limdiwala</div>
+            <!-- Mobile menu toggle (hamburger) -->
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu (hidden by default) -->
+            <ul class="menu-mobile">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
             <div class="hero">
                 <h1>Hey, It’s Husena Limdiwala. <br> UI/UX & Front-End Develepor</h1>
 
-                <button class="cta">My Resume</button>
-                <button class="cta">View Projects</button>
+                <button class="cta"><a href="images/Resume.pdf" class="button"><!--<i class="fa fa-download"></i>-->My Resume</a></button>
+                <button class="cta"><a href="#projects">View Projects</a></button>
                 <br><br>
                 <button class="cta">
                   <i class="fas fa-chevron-down"></i>
@@ -34,7 +47,7 @@
     </header>
 
 <!-- Swiper Container (Gallery) -->
-<section class="swiper-container">
+<section class="swiper-container" id="projects">
   <div class="container">
       <h2>My Projects</h2>
       <div class="swiper-wrapper">
