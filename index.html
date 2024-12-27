@@ -3,70 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Husena Limdiwala</title>
+    <title>Husena Limdiwala Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Husena Limdiwala</div>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Hey, It’s Husena Limdiwala. <br> UI/UX & Front-End Develepor</h1>
 
-
-<div class="background-container">    
-  <header class="top-header">
-    <div class="top-center">
-        <h1>Husena Limdiwala</h1>
-    </div>
-    <div class="top-right">
-        <span class="menu-icon" onclick="toggleNavBar()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </span>
-        
-    </div>
-  </header>
-
-  <nav class="navbar" id="navbar">
-    <span class="close-button" onclick="toggleNavBar()">✖
-    <ul class="nav-list">
-        <li class="nav-item"><a href="#home">Home</a></li>
-        <li class="nav-item"><a href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#contact">Contact</a></li>
-    </ul>
-  </span>
-  </nav>
- 
-  
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="container-general">
-          <div class="gallery-wrap wrap-effect-1">
-            <div class="item" data-name="Cactus Coffee"></div>
-            <div class="item" data-name="Tea Biscuit"></div>
-            <div class="item" data-name="Dog Walker"></div>
-            <div class="item" data-name="Scooter"></div>
-            <div class="item" data-name="Storytime"></div>
-          </div>
+                <button class="cta">My Resume</button>
+                <button class="cta">View Projects</button>
+                <br><br>
+                <button class="scroll">Scroll Down</button>
+            </div>
         </div>
+    </header>
+
+<!-- Swiper Container (Gallery) -->
+<section class="swiper-container">
+  <div class="container">
+      <h2>My Projects</h2>
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="container-general">
+                  <div class="gallery-wrap wrap-effect-1">
+                      <div class="item" data-name="Cactus Coffee"></div>
+                      <div class="item" data-name="Tea Biscuit"></div>
+                      <div class="item" data-name="Dog Walker"></div>
+                      <div class="item" data-name="Scooter"></div>
+                      <div class="item" data-name="Storytime"></div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
+      <!-- Image Name Display -->
+      <div id="hovered-image-name" class="image-name"></div>
+      <div class="swiper-button">
+          <button class="cta">View All Projects</button>
+      </div>
   </div>
+</section>
 
-  <div class="bottom-center">
-    <div class="button-container">
-      <a href="#resume">Check My Resume</a>
-      <a href="#projects">View all projects</a>
-    </div>
-  </div>
-</div>
 
-<div class="image-name">
-  <p id="hovered-image-name"></p>
-</div>
+    <section class="work-process">
+        <div class="container">
+            <h2>My Work Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <h3>01</h3>
+                    <p>Introduction</p>
+                </div>
+                <div class="step">
+                    <h3>02</h3>
+                    <p>UX Design</p>
+                </div>
+                <div class="step">
+                    <h3>03</h3>
+                    <p>UI Design</p>
+                </div>
+                <div class="step">
+                    <h3>04</h3>
+                    <p>Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Dropping Image -->
-<img src="Images/dROP.png" alt="Dropping Image" class="dropping-image">
+    <section class="recent-work">
+        <div class="container">
+            <h2>Recent Case Study</h2>
+            <div class="work-gallery">
+                <img src="work1.jpg" alt="Work 1">
+                <img src="work2.jpg" alt="Work 2">
+                <img src="work3.jpg" alt="Work 3">
+                <img src="work4.jpg" alt="Work 4">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="services-list">
+                <div class="service">
+                    <h3>Product Design</h3>
+                </div>
+                <div class="service">
+                    <h3>User Experience Design</h3>
+                </div>
+                <div class="service">
+                    <h3>User Interface Design</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2>Have a project idea? Get in touch and let's chat.</h2>
+            <a href="mailto:info@marvin.com" class="email-link">info@marvin.com</a>
+        </div>
+    </footer>
 
 <script src="scripts.js"></script>
+  
 </body>
 </html>

@@ -1,182 +1,116 @@
-html, body {
-  width: 100%;
-  height: 100%;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, p {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Roboto Slab', serif;
-  color: #000;
-  background: url('Images/Desktop2.png') center/cover no-repeat;
-  cursor: url('Images/cursor.png'), auto;
-  margin: 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-
-.background-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s ease-in-out;
+/* Header Section */
+.header {
+  background: linear-gradient(to bottom, #000, #333);
+  color: #fff;
+  padding: 20px 0;
 }
 
 .navbar {
-  background-color: #333;
-  padding: 15px;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  display: none;
-}
-
-.nav-list {
-  list-style: none; 
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.nav-item {
-  display: block; /* Changed from inline-block to block */
-  margin-bottom: 10px; /* Added margin to separate items */
-}
-
-.nav-item a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  display: block; /* Added for full-width links */
-  padding: 10px; /* Added padding for touch-friendly area */
-}
-
-.nav-item a:hover {
-  color: #ffd700;
-}
-
-.close-button {
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  position: relative;
-  top: 15px; /* Adjust the top position as needed */
-  left: 20px;
-}
-
-.top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 15px;
-  width: calc(100% - 40px);
 }
 
-.top-center h1 {
-  color: white;
-  margin: 0;
-  text-align: center;
-  flex: 1;
-}
-
-.top-right {
-  cursor: pointer;
-}
-
-.menu-icon {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.image-name {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#hovered-image-name {
-  font-family: 'Roboto Slab', serif;
-  color: #000;
-  font-size: 18px;
+.logo {
+  font-size: 1.5em;
   font-weight: bold;
-  position: absolute;
-  bottom: 70px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
+  color: #f3f3f3;
 }
 
-.heading {
-  background: white;
-  height: 5%;
-  margin: 10px;
-  padding: 10px;
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
+.menu li a {
+  font-size: 1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background: #f3f3f3;
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #444 url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero .cta {
+  background: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero .cta:hover {
+  background: #ffffff;
+  color: #ff6f61;
+}
+
+/* Swiper Container Styles */
 .swiper-container {
   width: 100%;
-  height: 72%;
-  margin-top: -30px;
-  margin-bottom: 60px;
-  z-index: 1;
+  padding: 40px 0;
+  background: #f5f5f5;
+}
+
+.swiper-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
 }
-
-.container-general {
-  padding: 75px 0;
-  margin: 0 auto;
-  width: 80%; /* Changed to percentage for responsiveness */
-  max-width: 800px; /* Added max-width for larger screens */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-  margin-top: 20px; /* Adjust this property to control the space */
-}
-
-.bottom-center a{
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 8px 15px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  margin:0 10px; /* Add margin to separate links */
-}
-
-.bottom-center a:hover {
-  background-color: #333;
-  color: white;
-}
-
-
 
 .gallery-wrap {
   display: flex;
@@ -193,7 +127,7 @@ body {
   margin: 10px;
   background-position: center;
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   transition: all 0.8s ease;
   transform-origin: center center;
   transform: perspective(1000px) skewY(-15deg);
@@ -202,7 +136,7 @@ body {
 }
 
 .item:nth-child(odd) {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .item:nth-child(even) {
@@ -215,10 +149,7 @@ body {
   transform: perspective(1000px) skewY(0deg);
 }
 
-.wrap-effect-1 .item {
-  border-radius: 15px; /* Apply border-radius to all items */
-}
-
+/* Gallery Item Backgrounds */
 .wrap-effect-1 .item:first-of-type {
   background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4185141/galshir-cactus-coffee.png');
 }
@@ -239,38 +170,217 @@ body {
   background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4738104/galshir-storytime.png');
 }
 
-@keyframes dropAnimation {
-  0% {
-    transform: translateY(-100vh);
-  }
-  100% {
-    transform: translateY(0);
-  }
+/* Button Styles */
+.swiper-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px; /* Add some space between swiper and button */
 }
 
-.dropping-image {
-  position: fixed;
-  top: 0;
-  right: 2%;
-  animation: dropAnimation 2s ease-out;
-  z-index: 999;
+.swiper-button .cta {
+  background: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
+.swiper-button .cta:hover {
+  background: #ffffff;
+  color: #ff6f61;
+}
+
+/* Image Name Display */
+.image-name {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Roboto Slab', serif;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  display: none; /* Hidden by default */
+  padding-top: 10px;
+}
+
+/* Add a rule to display image name when active */
+.image-name.active {
+  display: block;
+}
+
+
+/* Biography Section */
+.biography {
+  padding: 60px 20px;
+  background: #f3f3f3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-image {
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bio-text {
+  max-width: 500px;
+}
+
+.bio-text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.bio-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bio-text li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Work Process */
+.work-process {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.work-process h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step {
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.step:hover {
+  transform: scale(1.05);
+}
+
+.step h3 {
+  font-size: 2em;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+/* Recent Work */
+.recent-work {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.work-gallery img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.work-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.footer h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.email-link {
+  color: #ff6f61;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
-  .top-header {
-    flex-direction: column; /* Change flex direction for small screens */
-    align-items: center;
+  .menu {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
   }
 
-  .top-right {
-    margin-top: 10px; /* Add margin to the top-right div */
+  .hero h1 {
+      font-size: 2em;
   }
 
-  .menu-icon {
-    margin-top: 10px; /* Add margin to the menu icon */
+  .process-steps {
+      flex-direction: column;
   }
 
-  .navbar {
-    top: 40px; /* Adjust the top position of the navbar */
+  .step {
+      width: 90%;
+  }
+
+  .biography {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .work-gallery img {
+      max-width: 100%;
+  }
+
+  .swiper-container {
+      padding: 40px 20px;
+  }
+
+  .swiper-wrapper {
+      justify-content: center;
+  }
+
+  .swiper-slide {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.5em;
+  }
+
+  .hero .cta {
+      font-size: 0.9em;
+  }
+
+  .menu li a {
+      font-size: 0.9em;
   }
 }
