@@ -17,3 +17,25 @@ document.querySelectorAll('.item').forEach(item => {
 document.querySelector('.menu-toggle').addEventListener('click', () => {
     document.querySelector('.menu').classList.toggle('active');
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeSwitch = document.getElementById("theme-switch");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      themeSwitch.checked = true;
+    }
+
+    // Toggle theme on checkbox change
+    themeSwitch.addEventListener("change", () => {
+      if (themeSwitch.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  });

@@ -13,6 +13,15 @@
         <div class="container">
           <nav class="navbar">
             <div class="logo">Husena Limdiwala</div>
+
+            <div class="theme-toggle">
+              <input type="checkbox" id="theme-switch" />
+              <label for="theme-switch" class="switch-label">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+              </label>
+          </div>
+          
             <!-- Mobile menu toggle (hamburger) -->
             <div class="menu-toggle">
                 <div></div>
@@ -21,26 +30,31 @@
             </div>
             <ul class="menu">
                 <li><a href="#">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <!-- Mobile Menu (hidden by default) -->
             <ul class="menu-mobile">
                 <li><a href="#">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
             <div class="hero">
+              <div class="tomb">
+                <img class="tomb-image" src="Images/Husena.png" alt="Husena" />
+            </div>
+            
                 <h1>Hey, It’s Husena Limdiwala. <br> UI/UX & Front-End Develepor</h1>
-
                 <button class="cta"><a href="Images/Resume.pdf" class="button" download><!--<i class="fa fa-download"></i>-->My Resume</a></button>
                 <button class="cta"><a href="#projects">View Projects</a></button>
                 <br><br>
                 <button class="cta">
-                  <i class="fas fa-chevron-down"></i>
+                  <a href="#contact">
+                    <i class="fas fa-chevron-down"></i>
+                  </a>
               </button>
             </div>
         </div>
@@ -125,10 +139,10 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <h2>Have a project idea? Get in touch and let's chat.</h2>
-            <a href="mailto:info@marvin.com" class="email-link">info@marvin.com</a>
+            <a href="mailto:limdiwalahusena123@gmail.com" class="email-link">limdiwalahusena123@gmail.com</a>
         </div>
     </footer>
 

@@ -1,3 +1,47 @@
+/* Theme Toggle Container */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hide the actual checkbox */
+#theme-switch {
+  display: none;
+}
+
+/* Label Styling for the Toggle */
+.switch-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 30px;
+  background: #f3f3f3;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+/* Icon Styling */
+.switch-label .sun, .switch-label .moon {
+  font-size: 16px;
+  display: none;
+}
+
+/* Show relevant icon based on mode */
+#theme-switch:checked + .switch-label .moon {
+  display: inline;
+}
+
+#theme-switch:not(:checked) + .switch-label .sun {
+  display: inline;
+}
+
+
 /* General Styles */
 body {
   margin: 0;
@@ -142,14 +186,14 @@ a {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   background: #444 url('hero-bg.jpg') center/cover no-repeat;
   color: #fff;
 }
 
 .hero h1 {
   font-size: 3em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero .cta {
@@ -166,6 +210,29 @@ a {
 .hero .cta:hover {
   background: #ffffff;
   color: #ff6f61;
+}
+
+/* Tomb Shape */
+.tomb {
+  width: 200px;  
+  height: 200px; 
+  background-color: #888;
+  border-radius: 50% 50% 0 0; 
+  position: relative; 
+}
+
+/* Tomb Image */
+.tomb-image {
+  width: 200px;
+  overflow: visible;
+  position: absolute;  
+  top: -44px;  /*Adjust the position to place the image above the tomb */
+  left: 50%;  /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust to make sure the image is perfectly centered */
+}
+
+.hero .tomb {
+  margin: 0 auto 20px; /* Center the tomb */
 }
 
 
@@ -452,6 +519,150 @@ a {
   }
 }
 
+/* General Styles for Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f3f3f3;
+}
+
+/*body.dark-mode a {
+  color: #bb86fc;
+}*/
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode p {
+  color: #f3f3f3;
+}
+
+/* Header Section */
+body.dark-mode .header {
+  background: linear-gradient(to bottom, #333, #121212);
+  color: #f3f3f3;
+}
+
+body.dark-mode .menu li a {
+  background: #333;
+  color: #f3f3f3;
+}
+
+body.dark-mode .menu li a:hover {
+  background: #bb86fc;
+  color: #121212;
+}
+
+/* Hero Section */
+body.dark-mode .hero {
+  background: #222 url('hero-bg-dark.jpg') center/cover no-repeat;
+  color: #121212;
+}
+
+body.dark-mode .hero .cta {
+  background: #bb86fc;
+  color: #121212;
+}
+
+body.dark-mode .hero .cta:hover {
+  background: #121212;
+  color: #bb86fc;
+}
+
+/* Tomb Shape */
+body.dark-mode .tomb {
+  background-color: #444;
+}
+
+/* Swiper Container Styles */
+body.dark-mode .swiper-container {
+  background: #222;
+}
+
+body.dark-mode .swiper-container h2 {
+  color: #f3f3f3;
+}
+
+body.dark-mode .swiper-button .cta {
+  background: #bb86fc;
+  color: #121212;
+}
+
+body.dark-mode .swiper-button .cta:hover {
+  background: #121212;
+  color: #bb86fc;
+}
+
+body.dark-mode .image-name {
+  color: #f3f3f3;
+}
+
+/* Biography Section */
+body.dark-mode .biography {
+  background: #222;
+  color: #f3f3f3;
+}
+
+body.dark-mode .profile-image {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .bio-text h2 {
+  color: #bb86fc;
+}
+
+body.dark-mode .bio-text li {
+  color: #f3f3f3;
+}
+
+/* Work Process */
+body.dark-mode .work-process {
+  background: #333;
+  color: #f3f3f3;
+}
+
+body.dark-mode .work-process h2 {
+  color: #bb86fc;
+}
+
+body.dark-mode .step {
+  background: #444;
+}
+
+body.dark-mode .step h3 {
+  color: #bb86fc;
+}
+
+/* Recent Work */
+body.dark-mode .recent-work {
+  background: #222;
+}
+
+body.dark-mode .work-gallery img {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background: #121212;
+  color: #f3f3f3;
+}
+
+body.dark-mode .footer h2 {
+  color: #bb86fc;
+}
+
+body.dark-mode .email-link {
+  color: #bb86fc;
+}
+
+/* Responsive Design for Dark Mode */
+@media only screen and (max-width: 768px) {
+  body.dark-mode .menu li a {
+    background: #333;
+  }
+}
+
+
+
+
+
 @media only screen and (max-width: 480px) {
   .hero h1 {
       font-size: 1.5em;
@@ -464,4 +675,10 @@ a {
   .menu li a {
       font-size: 0.9em;
   }
+
+  body.dark-mode .hero h1 {
+    font-size: 1.5em;
+    color: #f3f3f3;
+  }
+
 }
